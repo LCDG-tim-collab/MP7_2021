@@ -163,9 +163,15 @@ void setup(){
 }
 
 
+void keyPressed(){
+  
+}
+
+
 void draw(){
   int formatx = int(displayWidth * .4), formaty = int(displayHeight * .4), x_histog = formatx + 20;
-  PImage img2 = contraste(img, 0.1);
+  PImage img = loadImage("Odyssey.png");
+  PImage img2 = contraste(img, 1.01);
   image(img2, 10, 40 + formaty, formatx, formaty);
   histo_rouge_img(img2, x_histog, formaty + 10, 256, 100);
   histo_vert_img(img2, x_histog, formaty + 140, 256, 100);
